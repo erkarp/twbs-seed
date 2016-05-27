@@ -4,3 +4,15 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin filter($code) {
+  filter: $code;
+  -webkit-filter: $code;
+}
+
+@mixin resizePanel($x) {
+  width: 100%;
+  clip-path: inset(0 0 $x 0);
+  -webkit-clip-path: inset(0 0 $x 0);
+  margin-bottom: -$x;
+}

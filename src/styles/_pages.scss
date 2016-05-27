@@ -1,0 +1,15 @@
+//  HOMEPAGE
+
+hgroup {
+  background-color: $color01;
+  background-image: url(../images/masthead-placeholder.png);
+  background-position: center center;
+  background-size: cover;
+  height: 30rem;
+  max-height: 50vw;
+  margin-bottom: 30px;
+}
+
+.panel img {
+  @include resizePanel(55px);
+}

@@ -1,9 +1,25 @@
 extends ./layouts/bootstrap.jade
 
+mixin panel(img, alt, title) 
+  .panel.col-sm-4
+    img.img-responsive(src=img alt=alt height='180')
+    h3.text-center= title
+    block
+
+block pagename
+  h1 Only The Best
+
 block content
+  hgroup.container-fluid
+    
   .container
     .row
-      p.col-xs-6.text-center
-        img.img-responsive(src='images/lorempixel_640_480_abstract.jpeg', alt='Abstract Image')
-      p.col-xs-6.text-center
-        img.img-responsive(src='images/placeimg_640_480_nature.jpg', alt='Nature Image')
+      +panel('images/placeimg_640_480_nature.jpg', 'pic 1', 'Lorem Ipsum')
+        p Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'
+      
+      +panel('images/placeimg_640_480_nature.jpg', 'pic 2', 'Lorem Ipsum')
+        p Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'
+      
+      +panel('images/placeimg_640_480_nature.jpg', 'pic 3', 'Lorem Ipsum')
+        p Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'
+      
